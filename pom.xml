@@ -163,6 +163,12 @@
       <version>${standard.version}</version>
     </dependency>
     <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard</artifactId>
+      <version>${standard.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjrt</artifactId>
       <version>1.8.9</version>
