@@ -1,4 +1,4 @@
-package com.yy.ctrl;
+package com.yy.crtl;
 
 /**
  * AUTHOR: yy
