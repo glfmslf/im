@@ -76,7 +76,6 @@ public class User {
     private String openId; // 微信公众平台使用的openid
     private String userMark; // 用户保密
 
-    private int user_version; // User数据版本控制，不允许多线程同时修改User(2016-02-24：此乐观锁会导致很多业务失败，如预存款支付成功但订单状态仍为未支付。抛出异常：StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect)。故去除此乐观锁)
 
     private String sellerLoginAccount;//卖家的登录账号名。
 
