@@ -9,8 +9,5 @@
         <module name="im" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="im" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
