@@ -5,6 +5,8 @@
 <head>
     <title>test</title>
 </head>
+<script resource="\resources\jquery-1.10.2.js"></script>
+<script resource="\resources\vue.js"></script>
 <body>
     welcome
 </body>
