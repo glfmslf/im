@@ -1,0 +1,38 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>-->
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>test</title>
+</head>
+
+<script src="/resources/jquery-1.10.2.js"></script>
+<script src="/resources/vue.min.js"></script>
+<body>
+    <div>
+        <span id = "userName">{{userName}}</span>
+        <span><input type="text" name="userName"/></span>
+    </div>
+    <div>
+        <span id="password">{{password}}</span>
+        <span><input type="password" name="userPassword"/></span>
+    </div>
+    <div>
+        <input type="button" value="提交" id = "subt" >{{submit}}</input>
+    </div>
+</body>
+<script type="text/javascript">
+    var userName = new Vue({
+        e1:"#userName",
+        data:{userName:"用户名"}
+    })
+    var password = new Vue({
+        e1:"#password",
+        data:{password:"密码"}
+    })
+</script>
+</html>
