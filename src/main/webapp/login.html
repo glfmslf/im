@@ -23,7 +23,7 @@
         </tr>
         <tr>
             <td colspan="2" style="align:center;valign:middle"><input type="submit" v-bind:value="message" v-on:click="loginAcc" id = "subt" /></td>
-            <td colspan="2" style="align:center;valign:middle"><input type="submit" v-bind:value="message" v-on:click="loginAcc" id = "subt" /></td>
+            <td colspan="2" style="align:center;valign:middle"><input type="submit" v-bind:value="message" v-on:click="registAcc" id = "regist" /></td>
         </tr>
     </table>
 
@@ -46,6 +46,17 @@
         },
         methods:{
             loginAcc:function () {
+                $("#userLogin").submit();
+            }
+        }
+    });
+    var subt = new Vue({
+        el: '#regist',
+        data: {
+            message: "注册"
+        },
+        methods:{
+            registAcc:function () {
                 $("#userLogin").submit();
             }
         }
