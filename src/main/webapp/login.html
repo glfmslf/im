@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <script src="/resources/jquery-1.10.2.js"></script>
 <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
 <head>
@@ -10,32 +10,44 @@
     <title>test</title>
 </head>
 <body>
-<div>
-    <span id = "userName" style="width:53px">{{userName}}
-    </span>
-    <input type="text" name="userName"/>
-</div>
-<div>
-    <span id="password" style="width:53px">{{ message }}</span>
-    <span><input type="password" name="userPassword"/></span>
-</div>
-<div>
-    <input type="button" v-bind:value="message" id = "subt" ></input>
-</div>
+<form id = "userLogin"action="/account/login.do">
+    <table>
+        <tr>
+            <td style="align:center;valign:middle"><span id = "userName">{{userName}}</span></td>
+            <td style="align:center;valign:middle"><input type="text" name="userName"/></td>
+        </tr>
+        <tr>
+            <td style="align:center;valign:middle"><span id="password">{{ message }}</span></td>
+
+            <td style="align:center;valign:middle"><input type="password" name="userPassword" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="align:center;valign:middle"><input type="submit" v-bind:value="message" v-on:click="loginAcc" id = "subt" /></td>
+            <td colspan="2" style="align:center;valign:middle"><input type="submit" v-bind:value="message" v-on:click="loginAcc" id = "subt" /></td>
+        </tr>
+    </table>
+
+</form>
+
 </body>
 <script type="text/javascript">
     var app1 = new Vue({
         el:'#userName',
-        data: {userName: "用户名"}
+        data: {userName: "用户名:"}
     })
     var app2 = new Vue({
         el:'#password',
-        data: {message: "密码"}
+        data: {message: "密码:"}
     })
     var subt = new Vue({
         el: '#subt',
         data: {
-            message: '提交'
+            message: "提交"
+        },
+        methods:{
+            loginAcc:function () {
+                $("#userLogin").submit();
+            }
         }
     })
 </script>

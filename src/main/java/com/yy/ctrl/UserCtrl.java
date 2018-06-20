@@ -15,4 +15,9 @@ public class UserCtrl {
     public String getUserList(){
         return "index";
     }
+
+    @RequestMapping("/login.do")
+    public String login(){
+        return "";
+    }
 }
