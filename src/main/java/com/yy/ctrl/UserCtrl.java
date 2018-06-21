@@ -1,5 +1,8 @@
 package com.yy.ctrl;
 
+import com.yy.pojo.User;
+import com.yy.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/account")
 public class UserCtrl {
 
+    @Autowired
+    private UserService userService;
+
     @RequestMapping("/getAccount.do")
     public String getUserList(){
         return "index";
@@ -19,5 +25,9 @@ public class UserCtrl {
     @RequestMapping("/login.do")
     public String login(){
         return "";
+    }
+    public String register(User user){
+
+        return null;
     }
 }
