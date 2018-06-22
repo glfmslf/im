@@ -1,5 +1,6 @@
 package com.yy.ctrl;
 
+import com.yy.conf.AuthLogin;
 import com.yy.pojo.User;
 import com.yy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class UserCtrl {
         return "index";
     }
 
+    @AuthLogin(requred = true)
     @RequestMapping("/login.do")
     public String login(){
         return "";

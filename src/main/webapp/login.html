@@ -10,7 +10,10 @@
     <title>test</title>
 </head>
 <body>
-<form id = "userLogin"action="/account/login.do">
+
+        <span><a href="#userLogin">登录</a></span>&nbsp;&nbsp;&nbsp;
+        <span><a href="#userRegiest">注册</a></span>
+<form id = "userLogin"action="/account/login.do" style="display: block">
     <table>
         <tr>
             <td style="align:center;valign:middle"><span id = "userName">{{userName}}</span></td>
@@ -23,12 +26,27 @@
         </tr>
         <tr>
             <td colspan="2" style="align:center;valign:middle"><input type="submit" v-bind:value="message" v-on:click="loginAcc" id = "subt" /></td>
+        </tr>
+    </table>
+
+</form>
+<form id = "userRegiest"action="/account/login.do" style="display: none">
+    <table>
+        <tr>
+            <td style="align:center;valign:middle"><span id = "userName1">{{userName}}</span></td>
+            <td style="align:center;valign:middle"><input type="text" name="userName"/></td>
+        </tr>
+        <tr>
+            <td style="align:center;valign:middle"><span id="password1">{{ message }}</span></td>
+
+            <td style="align:center;valign:middle"><input type="password" name="userPassword" /></td>
+        </tr>
+        <tr>
             <td colspan="2" style="align:center;valign:middle"><input type="submit" v-bind:value="message" v-on:click="registerAcc" id = "regist" /></td>
         </tr>
     </table>
 
 </form>
-
 </body>
 <script type="text/javascript">
     var app1 = new Vue({
@@ -37,6 +55,14 @@
     })
     var app2 = new Vue({
         el:'#password',
+        data: {message: "密码:"}
+    })
+    var app3 = new Vue({
+        el:'#userName1',
+        data: {userName: "用户名:"}
+    })
+    var app4 = new Vue({
+        el:'#password1',
         data: {message: "密码:"}
     })
     var subt = new Vue({
