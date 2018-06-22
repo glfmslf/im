@@ -86,4 +86,500 @@ public class User {
      * 指示当前登录的用户是否是从wap端登录的。注：只有买家可以从wap端登录。此字段会在登录成功时被设置
      */
     private boolean isWapContext = false;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public String getTrueName() {
+        return trueName;
+    }
+
+    public void setTrueName(String trueName) {
+        this.trueName = trueName;
+    }
+
+    public String getCustId() {
+        return custId;
+    }
+
+    public void setCustId(String custId) {
+        this.custId = custId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getQQ() {
+        return QQ;
+    }
+
+    public void setQQ(String QQ) {
+        this.QQ = QQ;
+    }
+
+    public String getWW() {
+        return WW;
+    }
+
+    public void setWW(String WW) {
+        this.WW = WW;
+    }
+
+    public int getMonth_income() {
+        return month_income;
+    }
+
+    public void setMonth_income(int month_income) {
+        this.month_income = month_income;
+    }
+
+    public int getYears() {
+        return years;
+    }
+
+    public void setYears(int years) {
+        this.years = years;
+    }
+
+    public String getMSN() {
+        return MSN;
+    }
+
+    public void setMSN(String MSN) {
+        this.MSN = MSN;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getSex() {
+        return sex;
+    }
+
+    public void setSex(int sex) {
+        this.sex = sex;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getCard() {
+        return card;
+    }
+
+    public void setCard(String card) {
+        this.card = card;
+    }
+
+    public Date getLastLoginDate() {
+        return lastLoginDate;
+    }
+
+    public void setLastLoginDate(Date lastLoginDate) {
+        this.lastLoginDate = lastLoginDate;
+    }
+
+    public Date getLoginDate() {
+        return loginDate;
+    }
+
+    public void setLoginDate(Date loginDate) {
+        this.loginDate = loginDate;
+    }
+
+    public String getLastLoginIp() {
+        return lastLoginIp;
+    }
+
+    public void setLastLoginIp(String lastLoginIp) {
+        this.lastLoginIp = lastLoginIp;
+    }
+
+    public String getLoginIp() {
+        return loginIp;
+    }
+
+    public void setLoginIp(String loginIp) {
+        this.loginIp = loginIp;
+    }
+
+    public int getLoginCount() {
+        return loginCount;
+    }
+
+    public void setLoginCount(int loginCount) {
+        this.loginCount = loginCount;
+    }
+
+    public int getReport() {
+        return report;
+    }
+
+    public void setReport(int report) {
+        this.report = report;
+    }
+
+    public BigDecimal getAvailableBalance() {
+        return availableBalance;
+    }
+
+    public void setAvailableBalance(BigDecimal availableBalance) {
+        this.availableBalance = availableBalance;
+    }
+
+    public BigDecimal getFreezeBlance() {
+        return freezeBlance;
+    }
+
+    public void setFreezeBlance(BigDecimal freezeBlance) {
+        this.freezeBlance = freezeBlance;
+    }
+
+    public int getIntegral() {
+        return integral;
+    }
+
+    public void setIntegral(int integral) {
+        this.integral = integral;
+    }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
+
+    public User getParent() {
+        return parent;
+    }
+
+    public void setParent(User parent) {
+        this.parent = parent;
+    }
+
+    public List<User> getChilds() {
+        return childs;
+    }
+
+    public void setChilds(List<User> childs) {
+        this.childs = childs;
+    }
+
+    public String getQq_openid() {
+        return qq_openid;
+    }
+
+    public void setQq_openid(String qq_openid) {
+        this.qq_openid = qq_openid;
+    }
+
+    public String getSina_openid() {
+        return sina_openid;
+    }
+
+    public void setSina_openid(String sina_openid) {
+        this.sina_openid = sina_openid;
+    }
+
+    public int getUser_type() {
+        return user_type;
+    }
+
+    public void setUser_type(int user_type) {
+        this.user_type = user_type;
+    }
+
+    public String getContact_user() {
+        return contact_user;
+    }
+
+    public void setContact_user(String contact_user) {
+        this.contact_user = contact_user;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getCompany_name() {
+        return company_name;
+    }
+
+    public void setCompany_name(String company_name) {
+        this.company_name = company_name;
+    }
+
+    public String getCompany_address() {
+        return company_address;
+    }
+
+    public void setCompany_address(String company_address) {
+        this.company_address = company_address;
+    }
+
+    public String getCompany_purpose() {
+        return company_purpose;
+    }
+
+    public void setCompany_purpose(String company_purpose) {
+        this.company_purpose = company_purpose;
+    }
+
+    public String getCompany_url() {
+        return company_url;
+    }
+
+    public void setCompany_url(String company_url) {
+        this.company_url = company_url;
+    }
+
+    public String getCompany_person_num() {
+        return company_person_num;
+    }
+
+    public void setCompany_person_num(String company_person_num) {
+        this.company_person_num = company_person_num;
+    }
+
+    public String getCompany_trade() {
+        return company_trade;
+    }
+
+    public void setCompany_trade(String company_trade) {
+        this.company_trade = company_trade;
+    }
+
+    public String getCompany_nature() {
+        return company_nature;
+    }
+
+    public void setCompany_nature(String company_nature) {
+        this.company_nature = company_nature;
+    }
+
+    public int getStore_apply_step() {
+        return store_apply_step;
+    }
+
+    public void setStore_apply_step(int store_apply_step) {
+        this.store_apply_step = store_apply_step;
+    }
+
+    public BigDecimal getUser_goods_fee() {
+        return user_goods_fee;
+    }
+
+    public void setUser_goods_fee(BigDecimal user_goods_fee) {
+        this.user_goods_fee = user_goods_fee;
+    }
+
+    public String getStaple_gc() {
+        return staple_gc;
+    }
+
+    public void setStaple_gc(String staple_gc) {
+        this.staple_gc = staple_gc;
+    }
+
+    public String getApp_login_token() {
+        return app_login_token;
+    }
+
+    public void setApp_login_token(String app_login_token) {
+        this.app_login_token = app_login_token;
+    }
+
+    public String getApp_seller_login_token() {
+        return app_seller_login_token;
+    }
+
+    public void setApp_seller_login_token(String app_seller_login_token) {
+        this.app_seller_login_token = app_seller_login_token;
+    }
+
+    public String getUser_form() {
+        return user_form;
+    }
+
+    public void setUser_form(String user_form) {
+        this.user_form = user_form;
+    }
+
+    public String getMobile_pay_password() {
+        return mobile_pay_password;
+    }
+
+    public void setMobile_pay_password(String mobile_pay_password) {
+        this.mobile_pay_password = mobile_pay_password;
+    }
+
+    public String getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(String invoice) {
+        this.invoice = invoice;
+    }
+
+    public int getInvoiceType() {
+        return invoiceType;
+    }
+
+    public void setInvoiceType(int invoiceType) {
+        this.invoiceType = invoiceType;
+    }
+
+    public int getInvoiceTitleType() {
+        return invoiceTitleType;
+    }
+
+    public void setInvoiceTitleType(int invoiceTitleType) {
+        this.invoiceTitleType = invoiceTitleType;
+    }
+
+    public String getEnterpriseTaxNumber() {
+        return enterpriseTaxNumber;
+    }
+
+    public void setEnterpriseTaxNumber(String enterpriseTaxNumber) {
+        this.enterpriseTaxNumber = enterpriseTaxNumber;
+    }
+
+    public Long getDelivery_id() {
+        return delivery_id;
+    }
+
+    public void setDelivery_id(Long delivery_id) {
+        this.delivery_id = delivery_id;
+    }
+
+    public int getWhether_attention() {
+        return whether_attention;
+    }
+
+    public void setWhether_attention(int whether_attention) {
+        this.whether_attention = whether_attention;
+    }
+
+    public String getCircle_create_info() {
+        return circle_create_info;
+    }
+
+    public void setCircle_create_info(String circle_create_info) {
+        this.circle_create_info = circle_create_info;
+    }
+
+    public String getCircle_attention_info() {
+        return circle_attention_info;
+    }
+
+    public void setCircle_attention_info(String circle_attention_info) {
+        this.circle_attention_info = circle_attention_info;
+    }
+
+    public String getOpenId() {
+        return openId;
+    }
+
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
+
+    public String getUserMark() {
+        return userMark;
+    }
+
+    public void setUserMark(String userMark) {
+        this.userMark = userMark;
+    }
+
+    public String getSellerLoginAccount() {
+        return sellerLoginAccount;
+    }
+
+    public void setSellerLoginAccount(String sellerLoginAccount) {
+        this.sellerLoginAccount = sellerLoginAccount;
+    }
+
+    public String getCurrentLoginRole() {
+        return currentLoginRole;
+    }
+
+    public void setCurrentLoginRole(String currentLoginRole) {
+        this.currentLoginRole = currentLoginRole;
+    }
+
+    public boolean isWapContext() {
+        return isWapContext;
+    }
+
+    public void setWapContext(boolean wapContext) {
+        isWapContext = wapContext;
+    }
 }

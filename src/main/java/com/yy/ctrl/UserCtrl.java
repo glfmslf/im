@@ -23,13 +23,15 @@ public class UserCtrl {
         return "index";
     }
 
-    @AuthLogin(requred = true)
+    @AuthLogin(requred = true,value = "无权限啊")
     @RequestMapping("/login.do")
     public String login(){
         return "";
     }
     public String register(User user){
 
+
+        userService.getUser(user.getCustId());
         return null;
     }
 }

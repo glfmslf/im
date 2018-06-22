@@ -23,6 +23,11 @@ public class LogAspect {
     @Around("ctrlAspect()")
     public Object aroundExec(ProceedingJoinPoint proceedingJoinPoint){
 
+        try {
+            proceedingJoinPoint.proceed();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
         return null;
     }
 
