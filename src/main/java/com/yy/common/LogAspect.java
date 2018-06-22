@@ -34,6 +34,11 @@ public class LogAspect {
     @Around("serviceAspect()")
     public Object aroundExec2(ProceedingJoinPoint proceedingJoinPoint){
 
+        try {
+            proceedingJoinPoint.proceed();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
         return null;
     }
 }
