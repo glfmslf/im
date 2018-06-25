@@ -3,6 +3,12 @@ package com.yy.common;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Method;
 
 /**
  * AUTHOR: youyu  工号：S37565
@@ -10,7 +16,7 @@ import org.aspectj.lang.annotation.Pointcut;
  */
 public class LogAspect {
 
-    @Pointcut("com.yy.ctrl..*(*)")
+    @Pointcut("@annotation(com.yy.conf.ServiceLog)")
     public void ctrlAspect(){
 
     }
@@ -23,7 +29,12 @@ public class LogAspect {
     @Around("ctrlAspect()")
     public Object aroundExec(ProceedingJoinPoint proceedingJoinPoint){
 
+        HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
+
         try {
+            MethodSignature methodSignature = (MethodSignature) proceedingJoinPoint.getSignature();
+            Method method = methodSignature.getMethod();
+            String ip = RequestUtil.getUserIp(request);
             proceedingJoinPoint.proceed();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
