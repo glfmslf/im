@@ -9,6 +9,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
+import java.util.UUID;
 
 /**
  * AUTHOR: youyu  工号：S37565
@@ -21,11 +22,6 @@ public class LogAspect {
 
     }
 
-    @Pointcut("com.yy.service..*(*)")
-    public void serviceAspect(){
-
-    }
-
     @Around("ctrlAspect()")
     public Object aroundExec(ProceedingJoinPoint proceedingJoinPoint){
 
@@ -35,6 +31,8 @@ public class LogAspect {
             MethodSignature methodSignature = (MethodSignature) proceedingJoinPoint.getSignature();
             Method method = methodSignature.getMethod();
             String ip = RequestUtil.getUserIp(request);
+            String url = request.getRequestURI().trim();
+            String reqNo = UUID.randomUUID().toString();
             proceedingJoinPoint.proceed();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
